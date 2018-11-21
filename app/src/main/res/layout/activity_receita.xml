@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReceitaActivity">
+
+    <TextView
+        android:id="@+id/titulo_receita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Título"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/autor_receita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/autor_receita"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:text="Autor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/likes_receita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_receita" />
+
+    <TextView
+        android:id="@+id/ingredientes_receita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredientes"
+        app:layout_constraintBottom_toTopOf="@+id/preparo_receita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/likes_receita" />
+
+    <TextView
+        android:id="@+id/preparo_receita"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:text="Preparo"
+        app:layout_constraintBottom_toTopOf="@+id/comentario_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientes_receita" />
+
+    <TextView
+        android:id="@+id/likes_receita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Likes"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ingredientes_receita"
+        app:layout_constraintEnd_toStartOf="@+id/down_voto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/up_voto"
+        app:layout_constraintTop_toBottomOf="@+id/autor_receita" />
+
+    <Button
+        android:id="@+id/up_voto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/\"
+        app:layout_constraintBottom_toTopOf="@+id/comentario_add"
+        app:layout_constraintEnd_toStartOf="@+id/likes_receita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/down_voto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V"
+        app:layout_constraintBottom_toTopOf="@+id/comentario_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/likes_receita"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/comentario_lista"
+        android:layout_width="368dp"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comentario_add" />
+
+    <Button
+        android:id="@+id/comentario_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar comentario"
+        app:layout_constraintBottom_toTopOf="@+id/comentario_lista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preparo_receita" />
+
+</android.support.constraint.ConstraintLayout>

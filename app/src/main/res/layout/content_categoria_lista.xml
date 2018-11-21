@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CategoriaLista"
+    tools:showIn="@layout/activity_categoria_lista">
+
+    <TextView
+        android:id="@+id/categoria_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Categoria"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/busca_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Busca"
+        app:layout_constraintBottom_toTopOf="@+id/listview_list"
+        app:layout_constraintEnd_toStartOf="@+id/search"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoria_list" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Busca"
+        app:layout_constraintBottom_toTopOf="@+id/listview_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/busca_list"
+        app:layout_constraintTop_toBottomOf="@+id/categoria_list" />
+
+    <ListView
+        android:id="@+id/listview_list"
+
+        android:layout_width="368dp"
+        android:layout_height="361dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busca_list" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerItems">
+        <item>Outras</item>
+        <item>Japonesa</item>
+        <item>Chinesa</item>
+        <item>Italiana</item>
+        <item>Coreana</item>
+        <item>Mexicana</item>
+    </string-array>
+</resources>
